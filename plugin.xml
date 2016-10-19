@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="KeyAccessDemo" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    
+    <name>KeyAcess</name>
+    <js-module name="KeyAcess" src="www/KeyAcess.js">
+        <clobbers target="cordova.plugins.KeyAcess" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="KeyAcess">
+                <param name="ios-package" value="KeyAcess" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/KeyAcess.m" />
+        <source-file src="src/ios/BDCryptor.h" />
+        <source-file src="src/ios/BDCryptor.m" />
+        <source-file src="src/ios/BDCryptorError.h" />
+        <source-file src="src/ios/BDCryptorError.m" />
+        <source-file src="src/ios/BDError.h" />
+        <source-file src="src/ios/BDError.m" />
+        <source-file src="src/ios/BDLog.h" />
+        <source-file src="src/ios/BDRSACryptor.h" />
+        <source-file src="src/ios/BDRSACryptor.m" />
+        <source-file src="src/ios/BDRSACryptorKeyPair.h" />
+        <source-file src="src/ios/BDRSACryptorKeyPair.m" />
+        <source-file src="src/ios/Keychain.h" />
+        <source-file src="src/ios/Keychain.m" />
+        <source-file src="src/ios/NSData+Base64.h" />
+        <source-file src="src/ios/NSData+Base64.m" />
+        <source-file src="src/ios/NSString+Base64.h" />
+        <source-file src="src/ios/NSString+Base64.m" />
+        <source-file src="src/ios/libCrypto.a" />
+            </platform>
+</plugin>
